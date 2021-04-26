@@ -70,20 +70,26 @@ class _HomeState extends State<Home> {
                 Container(
                   height: 400,
                   width: double.infinity,
-                  child: ListView(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      ProfileCard(),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      ProfileCard(),
-                      SizedBox(
-                        width: 10,
-                      ),
-                      ProfileCard(),
-                    ],
+                  child: Center(
+                    child: ListView(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      children: [
+                        ProfileCard(),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        ProfileCard(),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        ProfileCard(),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        ProfileCard(),
+                      ],
+                    ),
                   ),
                 )
               ],
