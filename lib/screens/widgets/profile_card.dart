@@ -31,6 +31,7 @@ class ProfileCard extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(top: 53, left: 5, right: 5),
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   Text(
                     name,
@@ -73,12 +74,15 @@ class ProfileCard extends StatelessWidget {
                   SizedBox(
                     height: 5,
                   ),
-                  Text(
-                    qualification,
-                    textAlign: TextAlign.left,
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontFamily: 'Source Sans Pro',
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: Text(
+                      qualification,
+                      textAlign: TextAlign.start,
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontFamily: 'Source Sans Pro',
+                      ),
                     ),
                   ),
                   SizedBox(
@@ -99,7 +103,7 @@ class ProfileCard extends StatelessWidget {
                   ),
                   Text(
                     experiance,
-                    textAlign: TextAlign.left,
+                    textAlign: TextAlign.start,
                     style: TextStyle(
                       fontSize: 16,
                       fontFamily: 'Source Sans Pro',

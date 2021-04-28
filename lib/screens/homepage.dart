@@ -87,6 +87,17 @@ class _HomeState extends State<Home> {
                       SizedBox(
                         width: 10,
                       ),
+                      ProfileCard(
+                        name: 'VAISAKH.P',
+                        jobdesignation: 'Developer',
+                        qualification: 'Degree',
+                        experiance:
+                            'Currently working as a Techgebra LLP, and freelancer',
+                        imagename: 'vaisakh.jpeg',
+                      ),
+                      SizedBox(
+                        width: 10,
+                      ),
                     ],
                   ),
                 ),
