@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+
 import 'package:team_portfolio/screens/widgets/profile_card.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:carousel_slider/carousel_slider.dart';
+import 'package:team_portfolio/screens/widgets/projectcard.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -14,11 +15,6 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    List<String> images = [
-      'assets/images/sreevisakh.jpg',
-      'assets/images/vaisakh.jpeg',
-      'assets/images/ribin.jpeg'
-    ];
     const colorizeColors = [
       Colors.purple,
       Colors.blue,
@@ -114,10 +110,21 @@ class _HomeState extends State<Home> {
                       ProfileCard(
                         name: 'RIBINSHAD',
                         jobdesignation: 'Flutter Developer',
-                        qualification: 'MCA',
+                        qualification: 'Bsc computer science',
                         experiance:
                             'Currently working as flutter developer at Techgebra LLP',
                         imagename: 'ribin.jpeg',
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      ProfileCard(
+                        name: 'AFEEFA',
+                        jobdesignation: 'Flutter Developer',
+                        qualification: 'MCA',
+                        experiance:
+                            'Currently working as flutter developer at Techgebra LLP',
+                        imagename: 'user.jpg',
                       ),
                     ],
                   ),
@@ -127,12 +134,13 @@ class _HomeState extends State<Home> {
                 height: 10,
               ),
               Container(
-                height: 400,
+                height: 520,
                 width: double.infinity,
                 child: Column(
                   children: [
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         SizedBox(
                           width: 30,
@@ -151,83 +159,15 @@ class _HomeState extends State<Home> {
                     SizedBox(
                       height: 50,
                     ),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        SizedBox(
-                          width: 20,
-                        ),
-                        Container(
-                          child: Row(
-                            children: [
-                              Container(
-                                height: 70,
-                                width: 100,
-                                child: Card(
-                                  elevation: 5,
-                                  child: Image.asset(
-                                      'assets/images/playstore.png'),
-                                ),
-                              ),
-                              SizedBox(
-                                width: 10,
-                              ),
-                              Container(
-                                height: 70,
-                                width: 100,
-                                child: Card(
-                                  elevation: 5,
-                                  child:
-                                      Image.asset('assets/images/appstore.png'),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                        SizedBox(
-                          width: 50,
-                        ),
-                        Container(
-                          width: 2,
-                          height: 200,
-                          color: Colors.red,
-                        ),
-                        SizedBox(
-                          width: 50,
-                        ),
-                        Container(
-                          width: 400,
-                          height: 200,
-                          child: CarouselSlider(
-                            options: CarouselOptions(
-                                initialPage: 0,
-                                enlargeCenterPage: true,
-                                height: 200,
-                                autoPlay: true,
-                                aspectRatio: 16 / 9,
-                                autoPlayCurve: Curves.fastOutSlowIn,
-                                enableInfiniteScroll: true,
-                                autoPlayAnimationDuration:
-                                    Duration(microseconds: 1),
-                                viewportFraction: 0.8),
-                            items: images.map((i) {
-                              return Builder(
-                                builder: (BuildContext context) {
-                                  return Container(
-                                    width: MediaQuery.of(context).size.width,
-                                    margin:
-                                        EdgeInsets.symmetric(horizontal: 5.0),
-                                    decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                            image: AssetImage(i))),
-                                  );
-                                },
-                              );
-                            }).toList(),
-                          ),
-                        )
-                      ],
-                    )
+                    ProjectCard(
+                      projectName: 'Project Name',
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ProjectCard(
+                      projectName: 'Project Name',
+                    ),
                   ],
                 ),
               ),
