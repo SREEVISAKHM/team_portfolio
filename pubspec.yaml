@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  animated_text_kit: ^4.2.1
+  carousel_slider: ^3.0.0
   cupertino_icons: ^1.0.2
   lottie: ^1.0.1
 
@@ -43,6 +45,9 @@ flutter:
     - family: Source Sans Pro
       fonts:
         - asset: assets/fonts/SourceSansPro-Regular.ttf
+    - family: Horizon
+      fonts:
+        - asset: assets/fonts/Horizon.otf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #
