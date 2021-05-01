@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-
-import 'package:team_portfolio/screens/widgets/profile_card.dart';
+import 'package:team_portfolio/profilecard/profilecardlayout.dart';
+import 'package:team_portfolio/projectcardview/projectcardlayout.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:team_portfolio/screens/widgets/projectcard.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -77,64 +76,11 @@ class _HomeState extends State<Home> {
                   child: Lottie.asset('assets/lottie/coding.json'),
                 ),
               ),
-              Container(
-                height: 400,
-                width: double.infinity,
-                child: Center(
-                  child: ListView(
-                    shrinkWrap: true,
-                    scrollDirection: Axis.horizontal,
-                    children: [
-                      ProfileCard(
-                        name: 'SREEVISAKH.M',
-                        jobdesignation: 'Flutter developer',
-                        qualification:
-                            'B Tech in Electronics and communication',
-                        experiance: 'Currently working as a freelancer ',
-                        imagename: 'sreevisakh.jpg',
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ProfileCard(
-                        name: 'VAISAKH.P',
-                        jobdesignation: 'Developer',
-                        qualification: 'Degree',
-                        experiance:
-                            'Currently working as a developer in Techgebra LLP, and freelancer',
-                        imagename: 'vaisakh.jpeg',
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ProfileCard(
-                        name: 'RIBINSHAD',
-                        jobdesignation: 'Flutter Developer',
-                        qualification: 'Bsc computer science',
-                        experiance:
-                            'Currently working as flutter developer at Techgebra LLP',
-                        imagename: 'ribin.jpeg',
-                      ),
-                      SizedBox(
-                        width: 20,
-                      ),
-                      ProfileCard(
-                        name: 'AFEEFA',
-                        jobdesignation: 'Flutter Developer',
-                        qualification: 'MCA',
-                        experiance:
-                            'Currently working as flutter developer at Techgebra LLP',
-                        imagename: 'user.jpg',
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              ProfileCardLayout(),
               SizedBox(
                 height: 10,
               ),
               Container(
-                height: 520,
                 width: double.infinity,
                 child: Column(
                   children: [
@@ -159,14 +105,13 @@ class _HomeState extends State<Home> {
                     SizedBox(
                       height: 50,
                     ),
-                    ProjectCard(
-                      projectName: 'Project Name',
-                    ),
+                    ProjectCardLayout(),
                     SizedBox(
                       height: 10,
                     ),
-                    ProjectCard(
-                      projectName: 'Project Name',
+                    ProjectCardLayout(),
+                    SizedBox(
+                      height: 10,
                     ),
                   ],
                 ),

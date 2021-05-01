@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:team_portfolio/screens/widgets/imagelist.dart';
 
 class ProjectCard extends StatelessWidget {
   final String projectName;
-  const ProjectCard({Key key, this.projectName}) : super(key: key);
+  final List<String> images;
+  const ProjectCard({Key key, this.projectName, this.images}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    List images = ImageList().images;
     return Container(
       child: Row(
         children: [
@@ -56,10 +55,10 @@ class ProjectCard extends StatelessWidget {
             ),
           ),
           SizedBox(
-            width: 200,
+            width: 150,
           ),
           Container(
-            height: 200,
+            height: 500,
             width: MediaQuery.of(context).size.width - 510,
             child: ListView.builder(
               shrinkWrap: true,
@@ -68,8 +67,8 @@ class ProjectCard extends StatelessWidget {
                 return Row(
                   children: [
                     Container(
-                      height: 200,
-                      width: 200,
+                      height: 500,
+                      width: 300,
                       decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(images[index]), fit: BoxFit.fill),
