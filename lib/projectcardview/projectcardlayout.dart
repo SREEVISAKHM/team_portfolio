@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:team_portfolio/projectcardview/projectcardmobile.dart';
 
 import 'package:team_portfolio/projectcardview/projectcardweb.dart';
-import 'package:team_portfolio/screens/widgets/imagelist.dart';
 
 class ProjectCardLayout extends StatelessWidget {
-  const ProjectCardLayout({Key key}) : super(key: key);
+  final String projectName;
+
+  final List<String> images;
+  const ProjectCardLayout({Key key, @required this.projectName, this.images})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,8 +19,8 @@ class ProjectCardLayout extends StatelessWidget {
         return ProjectCardWeb();
       } else {
         return ProjectCardMobile(
-          projectName: 'Project Name',
-          images: ImageList().images,
+          projectName: projectName,
+          images: images,
         );
       }
     });

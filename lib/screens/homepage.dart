@@ -3,6 +3,7 @@ import 'package:lottie/lottie.dart';
 import 'package:team_portfolio/profilecard/profilecardlayout.dart';
 import 'package:team_portfolio/projectcardview/projectcardlayout.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
+import 'package:team_portfolio/screens/widgets/imagelist.dart';
 
 class Home extends StatefulWidget {
   Home({Key key}) : super(key: key);
@@ -105,11 +106,31 @@ class _HomeState extends State<Home> {
                     SizedBox(
                       height: 50,
                     ),
-                    ProjectCardLayout(),
+                    ProjectCardLayout(
+                      projectName: "Tenthaind ",
+                      images: ImageList().images,
+                    ),
                     SizedBox(
                       height: 10,
                     ),
-                    ProjectCardLayout(),
+                    ProjectCardLayout(
+                      projectName: "TrafficMan ",
+                      images: ImageList2().images,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ProjectCardLayout(
+                      projectName: "Malabar Souq (E-Commerce)",
+                      images: ImageList3().images,
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    ProjectCardLayout(
+                      projectName: "Mini-Pos (Pos App)",
+                      images: ImageList4().images,
+                    ),
                     SizedBox(
                       height: 10,
                     ),

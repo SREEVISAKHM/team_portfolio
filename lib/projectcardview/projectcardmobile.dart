@@ -61,8 +61,10 @@ class ProjectCardMobile extends StatelessWidget {
           ),
           Container(
             child: ListView.builder(
+              itemCount: images.length,
               shrinkWrap: true,
               scrollDirection: Axis.vertical,
+              physics: NeverScrollableScrollPhysics(),
               itemBuilder: (BuildContext ctx, int index) {
                 return Column(
                   children: [
@@ -80,7 +82,6 @@ class ProjectCardMobile extends StatelessWidget {
                   ],
                 );
               },
-              itemCount: images.length,
             ),
           ),
         ],

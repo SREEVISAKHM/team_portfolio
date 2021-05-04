@@ -11,6 +11,7 @@ class ProfileCardMobile extends StatelessWidget {
       child: Center(
         child: ListView(
           shrinkWrap: true,
+          physics: NeverScrollableScrollPhysics(),
           scrollDirection: Axis.vertical,
           children: [
             ProfileCard(
