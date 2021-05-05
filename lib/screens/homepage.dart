@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+
+import 'package:team_portfolio/lottieview/lottielayout.dart';
 import 'package:team_portfolio/profilecard/profilecardlayout.dart';
 import 'package:team_portfolio/projectcardview/projectcardlayout.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
@@ -70,12 +71,9 @@ class _HomeState extends State<Home> {
                 'meet our team ...',
                 style: TextStyle(fontSize: 40, fontFamily: 'Pacifico'),
               ),
-              Center(
-                child: Container(
-                  height: 200,
-                  width: 200,
-                  child: Lottie.asset('assets/lottie/coding.json'),
-                ),
+              LottieLayout(),
+              SizedBox(
+                height: 10,
               ),
               ProfileCardLayout(),
               SizedBox(
@@ -163,7 +161,7 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Text(
-                        'Mobile :- +91-9746450223',
+                        'Mobile :- +91-9744449448',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
@@ -176,7 +174,7 @@ class _HomeState extends State<Home> {
                     Padding(
                       padding: const EdgeInsets.only(left: 20),
                       child: Text(
-                        'Tirur \nMalappuram (d)\npin: 676109',
+                        'Feroke \nCalicut (d)\npin: 673631',
                         style: TextStyle(
                             fontSize: 16,
                             color: Colors.white,
